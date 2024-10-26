@@ -1,0 +1,271 @@
+[gd_scene load_steps=11 format=3 uid="uid://bljbs783ckv2k"]
+
+[ext_resource type="Texture2D" uid="uid://dqhctt15676is" path="res://assets/apple_half_2.png" id="1_0ddyf"]
+[ext_resource type="Texture2D" uid="uid://dojg1k5gn6xoo" path="res://assets/apple_half_1.png" id="2_1gptr"]
+[ext_resource type="Texture2D" uid="uid://bbn030r3dtadj" path="res://assets/banana_half_2.png" id="3_7gpq3"]
+[ext_resource type="Texture2D" uid="uid://ctk4ciu6vwrme" path="res://assets/banana_half_1.png" id="4_ajug0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6vg4b"]
+radius = 32.0
+height = 64.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sr8ay"]
+size = Vector2(75.1293, 24.9202)
+
+[sub_resource type="Animation" id="Animation_4lp53"]
+resource_name = "apple"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("apple/apple-top:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(408, 282), Vector2(403, 264), Vector2(355, 251), Vector2(298.417, 264.625), Vector2(286, 281), Vector2(246, 349), Vector2(246, 416), Vector2(246, 700)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("apple/apple-top:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, -0.698132, -1.54985, -1.81514, -2.94961, -3.10669, -3.10669]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("apple/apple-bottom:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(408, 278), Vector2(419, 288), Vector2(447, 367), Vector2(447, 450), Vector2(447, 550), Vector2(449, 660)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("apple/apple-bottom:rotation")
+tracks/3/interp = 2
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.0349066, 0.0349066, 0.0349066, 0.0349066]
+}
+
+[sub_resource type="Animation" id="Animation_pu16g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("apple/apple-top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(408, 282)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("apple/apple-top:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("apple/apple-bottom:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(408, 278)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("apple/apple-bottom:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("banana/banana-top:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(405, 282)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("banana/banana-top:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("banana/banana-bottom:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(408, 278)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("banana/banana-bottom:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.264667]
+}
+
+[sub_resource type="Animation" id="Animation_xylmp"]
+resource_name = "banana"
+length = 0.8
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("banana/banana-top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(405.132, 284.057), Vector2(419, 250), Vector2(451, 232), Vector2(507, 211), Vector2(572, 246), Vector2(623, 306), Vector2(623, 384), Vector2(623, 496), Vector2(624, 664)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("banana/banana-bottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(408, 278), Vector2(400, 308), Vector2(412, 391), Vector2(412, 476), Vector2(412, 572), Vector2(412, 706)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("banana/banana-top:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.264667, 0.228788, 0.855769, 1.30269, 1.97425, 2.55238, 2.55238, 2.55238, 2.55238]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("banana/banana-bottom:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.264667, -0.567383, -0.90833, -0.90833, -0.90833, -0.90833]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qlu2w"]
+_data = {
+"RESET": SubResource("Animation_pu16g"),
+"apple": SubResource("Animation_4lp53"),
+"banana": SubResource("Animation_xylmp")
+}
+
+[node name="fruit" type="Node"]
+
+[node name="apple" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2(-240, 80)
+
+[node name="apple-top" type="Sprite2D" parent="apple"]
+position = Vector2(408, 282)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_0ddyf")
+
+[node name="apple-bottom" type="Sprite2D" parent="apple"]
+position = Vector2(408, 278)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_1gptr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="apple"]
+position = Vector2(408, 282)
+shape = SubResource("CapsuleShape2D_6vg4b")
+
+[node name="banana" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2(-240, 80)
+
+[node name="banana-top" type="Sprite2D" parent="banana"]
+position = Vector2(405, 282)
+scale = Vector2(0.153382, 0.151044)
+texture = ExtResource("3_7gpq3")
+
+[node name="banana-bottom" type="Sprite2D" parent="banana"]
+position = Vector2(408, 278)
+rotation = -0.264667
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("4_ajug0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="banana"]
+position = Vector2(419.321, 293.727)
+rotation = -0.96978
+shape = SubResource("RectangleShape2D_sr8ay")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qlu2w")
+}

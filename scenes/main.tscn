@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkyj08cmlw1xy"]
+
+[ext_resource type="Texture2D" uid="uid://7n3in1ha0rek" path="res://assets/background.png" id="1_8b58q"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_t30rn"]
+[ext_resource type="Texture2D" uid="uid://cci1krpa070j0" path="res://assets/title.png" id="2_5vvt5"]
+[ext_resource type="Theme" uid="uid://jusq8y32uv8x" path="res://themes/start_btn.tres" id="3_rl48s"]
+[ext_resource type="Texture2D" uid="uid://bj3rlg8r6bthq" path="res://assets/score.png" id="4_u4kkg"]
+[ext_resource type="FontFile" uid="uid://d01qm73yxlwat" path="res://fonts/DK Nouveau Crayon.otf" id="5_pobrw"]
+
+[node name="main" type="Node"]
+script = ExtResource("1_t30rn")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(-10, -751.692)
+scale = Vector2(1.92459, 1.92459)
+texture = ExtResource("1_8b58q")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="hud" type="CanvasLayer" parent="."]
+
+[node name="title" type="Sprite2D" parent="hud"]
+position = Vector2(352, 56)
+scale = Vector2(0.439543, 0.439542)
+texture = ExtResource("2_5vvt5")
+centered = false
+
+[node name="start" type="Button" parent="hud"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = 196.0
+offset_right = 96.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_rl48s")
+icon_alignment = 1
+
+[node name="score" type="Sprite2D" parent="hud"]
+position = Vector2(966, 95)
+scale = Vector2(0.228606, 0.228606)
+texture = ExtResource("4_u4kkg")
+
+[node name="score-label" type="Label" parent="hud"]
+offset_left = 1009.0
+offset_top = 68.0
+offset_right = 1072.0
+offset_bottom = 122.0
+theme_override_fonts/font = ExtResource("5_pobrw")
+theme_override_font_sizes/font_size = 45
+text = "0"
+vertical_alignment = 2
+
+[node name="fruit-timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="pressed" from="hud/start" to="." method="start_game"]
+[connection signal="timeout" from="fruit-timer" to="." method="_on_fruit_timer_timeout"]
